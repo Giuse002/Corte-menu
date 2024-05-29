@@ -4,49 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu del Ristorante</title>
+    <title>Menù Ristorante</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            /* Cambia questo colore con quello che preferisci */
+            background-color: #1a1a1a;
+            /* colore nerastro */
+            color: #fff;
+            margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            /* impedisce lo scorrimento */
+        }
+
+        header {
+            width: 100%;
             text-align: center;
-            padding: 50px;
+            margin-bottom: 20px;
         }
 
-        h1 {
-            color: #333;
+        header img {
+            max-width: 100%;
+            height: auto;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 20px 0;
-        }
-
-        a {
+        .menu-button {
+            background-color: #b22222;
+            /* rosso bordeaux */
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 15px 30px;
+            margin: 10px 0;
+            text-align: center;
             text-decoration: none;
-            color: #007BFF;
-            font-size: 20px;
-            transition: color 0.3s;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            transition: background-color 0.3s ease;
         }
 
-        a:hover {
-            color: #0056b3;
+        .menu-button:hover {
+            background-color: #ff4d4d;
+        }
+
+        @media (max-width: 600px) {
+            .menu-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Menu del Ristorante</h1>
-    <ul>
-        <li><a href="https://drive.google.com/file/d/1L_Jp8Fshw_vYTUFIktJtrVhWbFBbWUDY/preview?usp=share_link"
-                target="_blank">Menu La
-                Corte</a></li>
-    </ul>
+    <header>
+        <img src="path/to/your/image.jpg" alt="Ristorante Logo">
+    </header>
+    <a href="https://drive.google.com/link_to_pdf_1" class="menu-button">La Corte dei Prefetti</a>
+    <a href="https://drive.google.com/link_to_pdf_2" class="menu-button">La Locanda</a>
+    <a href="https://drive.google.com/link_to_pdf_3" class="menu-button">Vini Bianchi</a>
+    <a href="https://drive.google.com/link_to_pdf_4" class="menu-button">Vini Rossi</a>
 </body>
 
 </html>
