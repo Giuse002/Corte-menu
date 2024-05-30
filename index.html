@@ -6,57 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menù Ristorante</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
         body {
-            background-color: #1a1a1a;
-            /* colore nerastro */
+            background-color: #2C2C2C;
+            /* Nero marmoreo */
+            background-image: url('images/marble.jpg');
+            background-size: cover;
+            background-attachment: fixed;
             color: #fff;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Dancing Script', cursive;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             overflow: hidden;
-            /* impedisce lo scorrimento */
+            /* Impedisce lo scorrimento */
         }
 
         header {
             width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
         }
 
         header img {
-            max-width: 100%;
-            height: auto;
+            width: 9vw;
+            height: 9vw;
+            object-fit: cover;
         }
 
-        .menu-button {
-            background-color: #b22222;
-            /* rosso bordeaux */
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 15px 30px;
-            margin: 10px 0;
+        .restaurant-name {
+            flex-grow: 1;
             text-align: center;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            display: inline-block;
-            width: 100%;
-            max-width: 300px;
-            transition: background-color 0.3s ease;
+            font-size: 6em;
+            /* Ingrandito */
+            color: #fff;
+            /* Testo bianco */
         }
 
-        .menu-button:hover {
-            background-color: #ff4d4d;
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            margin: 10px;
+            flex: 1 1 20%;
+            /* Larghezza dei bottoni */
+            position: relative;
+        }
+
+        .menu-item a {
+            display: block;
+            text-decoration: none;
+            color: #D3D3D3;
+            /* Bianco scuro */
+            position: relative;
+        }
+
+        .menu-item p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 4em;
+            /* Ingrandito */
+            z-index: 2;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 25vh;
+            /* Altezza delle immagini */
+            object-fit: cover;
+            filter: blur(5px);
+            /* Effetto blur */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
         @media (max-width: 600px) {
-            .menu-button {
-                font-size: 1em;
-                padding: 10px 20px;
+            .menu-item {
+                flex: 1 1 45%;
+            }
+
+            .menu-item img {
+                height: 20vh;
+            }
+
+            .menu-item p {
+                font-size: 1.5em;
+                /* Ridotto per mobile */
             }
         }
     </style>
@@ -64,12 +120,47 @@
 
 <body>
     <header>
-        <img src="path/to/your/image.jpg" alt="Ristorante Logo">
+        <img src="images/logorosso.jpg" alt="Ristorante Logo">
+        <div class="restaurant-name">La Corte dei Prefetti di Vico</div>
     </header>
-    <a href="https://drive.google.com/link_to_pdf_1" class="menu-button">La Corte dei Prefetti</a>
-    <a href="https://drive.google.com/link_to_pdf_2" class="menu-button">La Locanda</a>
-    <a href="https://drive.google.com/link_to_pdf_3" class="menu-button">Vini Bianchi</a>
-    <a href="https://drive.google.com/link_to_pdf_4" class="menu-button">Vini Rossi</a>
+    <div class="menu-container">
+        <div class="menu-item">
+            <a href="https://drive.google.com/file/d/1_fh_-4tN1iSmMu4hnZJkvQ6UhXe9LRsx/preview">
+                <p>La Corte</p>
+                <img src="images/logo.jpg" alt="La Corte ">
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://drive.google.com/file/d/1JmMDU1VRYbkosTqNkD29M0yo9jxY5nlh/preview">
+                <p>La Locanda</p>
+                <img src="images/logo.jpg" alt="La Locanda">
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://drive.google.com/file/d/1I_jSZ6vQRSNOUMlfeOrJGTADa20KNUC0/preview">
+                <p>La Corte(English Version)</p>
+                <img src="images/logo.jpg" alt="La Corte(English)">
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://drive.google.com/link_to_pdf_4">
+                <p>L'Enoteca</p>
+                <img src="images/logo.jpg" alt="Enoteca">
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://drive.google.com/file/d/1dPP5inuK2qpvCZQv1-g43YY5NKRX6d1F/view?usp=drive_link">
+                <p>Vini Bianchi e Bollicine</p>
+                <img src="images/logo.jpg" alt="Vini Bianchi">
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://drive.google.com/file/d/1eSaPr8rg6HUGj5S2VNnEa-a9bkSLXh98/view?usp=drive_link">
+                <p>Vini Rossi</p>
+                <img src="images/logo.jpg" alt="Vini Rossi">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
