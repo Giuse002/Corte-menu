@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corte Suites</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            background-color: #2C2C2C;
+            /* Nero marmoreo */
+            background-image: url('images/marble-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .suites-name {
+            font-size: 4em;
+            /* Dimensione del titolo */
+            color: #fff;
+            /* Testo bianco */
+        }
+
+        .suites-container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .suite-item {
+            margin: 10px;
+            flex: 1 1 45%;
+            /* Larghezza degli elementi */
+        }
+
+        .suite-item img,
+        .suite-item video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .suite-item {
+                flex: 1 1 100%;
+                /* Larghezza piena per mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="suites-name">Corte Suites</div>
+    </header>
+    <p> Soggiorna in una delle nostre suites affacciate sul borgo di circa 50 mq con all'interno mini piscina,camino,
+        sauna finlandese e angolo cottura</p>
+
+    <div class="suite-item">
+        <video controls>
+            <source src="videos/suite-tour.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+    </div>
+    </div>
+</body>
+
+</html>
