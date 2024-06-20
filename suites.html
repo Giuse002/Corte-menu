@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corte Suites</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+    <style>
         body {
             background-color: #2C2C2C;
             /* Nero marmoreo */
@@ -16,7 +15,7 @@
             background-attachment: fixed;
             color: #fff;
             margin: 0;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Times New Roman', Times, serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -40,32 +39,21 @@
             /* Testo bianco */
         }
 
-        .suites-container {
+        .photo-container {
             width: 100%;
-            padding: 20px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        .suite-item {
-            margin: 10px;
-            flex: 1 1 45%;
-            /* Larghezza degli elementi */
-        }
-
-        .suite-item img,
-        .suite-item video {
+        .photo-container img {
             width: 100%;
-            border-radius: 10px;
+            height: 115vh;
+            /* Altezza delle immagini */
+            object-fit: cover;
             margin-bottom: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .suite-item {
-                flex: 1 1 100%;
-                /* Larghezza piena per mobile */
-            }
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -74,15 +62,12 @@
     <header>
         <div class="suites-name">Corte Suites</div>
     </header>
-    <p> Soggiorna in una delle nostre suites affacciate sul borgo di circa 50 mq con all'interno mini piscina,camino,
-        sauna finlandese e angolo cottura</p>
+    <h2>E’ possibile soggiornare in una delle nostre suites affacciate sul borgo di circa 50 mq con all’interno
+        mini piscina, camino, sauna finlandese e angolo cottura
+    </h2>
+    <div class="photo-container">
+        <img src="STANZA.jpg" alt="Corte Suite Photo 1">
 
-    <div class="suite-item">
-        <video controls>
-            <source src="videos/suite-tour.mp4" type="video/mp4">
-            Il tuo browser non supporta il tag video.
-        </video>
-    </div>
     </div>
 </body>
 
